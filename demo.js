@@ -10,11 +10,12 @@ app.get('/users',function(req,res){
     res.send("user page");
 });
 
-app.get('/list', function(req,res){
-    console.log("got a request for list");
-    res.send("user list");
+
+app.get('/:id',function(req,res){
+    console.log("the id you specified is:");
+    res.send('the id you specified is:'+ req.parans.id);
 });
 app.listen(2000,function(){
-    console.log("server started....");
+    console.log("server started...");
 
 });
